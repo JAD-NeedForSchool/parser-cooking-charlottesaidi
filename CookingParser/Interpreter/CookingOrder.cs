@@ -8,6 +8,6 @@ namespace CookingParser.Interpreter
 {
     interface CookingOrder
     {
-        void Interpret(CookingRecipeOrder context);
+        void Interprete(CookingRecipeOrder context);
     }
 }

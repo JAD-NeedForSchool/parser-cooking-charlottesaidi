@@ -1,14 +1,27 @@
 ﻿using CookingParser.Ingredient.Basic;
-using CookingParser.Ingredient;
 using CookingParser.Interpreter;
+using CookingParser.Operation.Complex;
 using CookingParser.Operation.Simple;
 
-Ingredient egg = new Egg();
+CookingOrder TakeYellowOrder = new SimpleOperationCookingOrder(new SimpleOperation("PrendreJaune"), new IngredientCookingOrder(new BasicIngredient("Oeuf")));
+CookingRecipeOrder context = new CookingRecipeOrder();
 
-SimpleOperation cut = new Cut();
 
-CookingRecipeOrder recipeOrder = new CookingRecipeOrder(egg);
 
-CookingOrder order = new SimpleOperationCookingOrder(cut);
+CookingOrder MixOrder = new NaryOperationCookingOrder(new NaryOperation("Mélanger"), [
+        TakeYellowOrder,
+    new IngredientCookingOrder(new BasicIngredient("Moutarde")),
+    new IngredientCookingOrder(new BasicIngredient("Vinaigre")),
+]);
 
-order.Interpret(recipeOrder);
+CookingOrder AddOrder = new NaryOperationCookingOrder(new NaryOperation("Ajouter"), [
+        MixOrder,
+    new IngredientCookingOrder(new BasicIngredient("Huile")),
+]);
+CookingOrder MayonnaiseRecipe = new SimpleOperationCookingOrder(new SimpleOperation("Touiller"), AddOrder);
+
+CookingRecipeOrder MayonnaiseOrder = new CookingRecipeOrder();
+
+MayonnaiseRecipe.Interprete(MayonnaiseOrder);
+
+Console.WriteLine(MayonnaiseOrder.ingredient.name);

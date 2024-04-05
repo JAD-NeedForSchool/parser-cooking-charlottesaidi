@@ -10,9 +10,9 @@ namespace CookingParser.Interpreter
     class IngredientCookingOrder: CookingOrder
     {
         Ingredient.Ingredient ingredient { get; set; }
-        public void Interpret(CookingRecipeOrder context)
+        public void Interprete(CookingRecipeOrder context)
         {
-            Console.WriteLine("Cuisine en cours");
+            context.ingredient = this.ingredient;
         }
 
         public IngredientCookingOrder(Ingredient.Ingredient ingredient)

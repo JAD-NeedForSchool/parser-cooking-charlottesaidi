@@ -1,4 +1,5 @@
-﻿using CookingParser.Operation.Simple;
+﻿using CookingParser.Ingredient.Complex;
+using CookingParser.Operation.Simple;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,18 @@ namespace CookingParser.Interpreter
     class SimpleOperationCookingOrder: CookingOrder
     {
         SimpleOperation operation { get; set; }
+        public CookingOrder cookingOrder { get; set; }
 
-        void CookingOrder.Interpret(CookingRecipeOrder context)
+        void CookingOrder.Interprete(CookingRecipeOrder context)
         {
-            Console.WriteLine("Cuisine en cours");
+            this.cookingOrder.Interprete(context);
+            context.ingredient = new ComplexIngredient(this.operation.name + "(" + context.ingredient.name + ")");
         }
 
-        public SimpleOperationCookingOrder(SimpleOperation operation)
+        public SimpleOperationCookingOrder(SimpleOperation operation, CookingOrder cookingOrder)
         {
             this.operation = operation;
+            this.cookingOrder = cookingOrder;
         }
     }
 }

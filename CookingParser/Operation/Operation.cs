@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Operation
 {
-    abstract class Operation
+    internal class Operation
     {
-        string Name { get; set; }
+        public string name { get; set; }
 
         public Operation(string name)
         {
-            Name = name;
+            this.name = name;
         }
     }
 }

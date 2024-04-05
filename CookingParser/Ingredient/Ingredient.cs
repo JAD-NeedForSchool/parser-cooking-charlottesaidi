@@ -8,11 +8,11 @@ namespace CookingParser.Ingredient
 {
     abstract class Ingredient
     {
-        string Name { get; set; }
+        public string name { get; set; }
 
         public Ingredient(string name)
         {
-            Name = name;
+            this.name = name;
         }
     }
 }

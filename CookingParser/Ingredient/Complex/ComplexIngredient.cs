@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Ingredient.Complex
 {
-    abstract class ComplexIngredient: Ingredient
+    internal class ComplexIngredient: Ingredient
     {
         public ComplexIngredient(string name) : base(name)
         {

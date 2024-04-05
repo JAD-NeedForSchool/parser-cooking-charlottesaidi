@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Operation.Complex
 {
-    abstract class NaryOperation: Operation
+    internal class NaryOperation: Operation
     {
         public NaryOperation(string name) : base(name)
         {

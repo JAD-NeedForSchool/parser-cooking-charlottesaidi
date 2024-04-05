@@ -1,4 +1,5 @@
 ﻿using CookingParser.Ingredient;
+using CookingParser.Ingredient.Basic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace CookingParser.Interpreter
 {
     class CookingRecipeOrder
     {
-        Ingredient.Ingredient ingredient { get; set; }
+        public Ingredient.Ingredient ingredient { get; set; }
 
-        public CookingRecipeOrder(Ingredient.Ingredient ingredient)
+        public CookingRecipeOrder()
         {
-            this.ingredient = ingredient;
+            ingredient = new BasicIngredient("");
         }
     }
 }

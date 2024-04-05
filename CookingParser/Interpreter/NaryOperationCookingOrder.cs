@@ -1,4 +1,6 @@
-﻿using CookingParser.Operation.Complex;
+﻿using CookingParser.Ingredient.Complex;
+using CookingParser.Operation;
+using CookingParser.Operation.Complex;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +11,25 @@ namespace CookingParser.Interpreter
 {
     class NaryOperationCookingOrder: CookingOrder
     {
-        NaryOperation[] operations { get; set; }
-        void CookingOrder.Interpret(CookingRecipeOrder context)
+        public Operation.Operation operation { get; set; }
+        public List<CookingOrder> cookingOrders { get; set; }
+        void CookingOrder.Interprete(CookingRecipeOrder context)
         {
-            Console.WriteLine("Cuisine en cours");
+            String subIngredients = "";
+            foreach (CookingOrder order in this.cookingOrders)
+            {
+                CookingRecipeOrder subContext = new CookingRecipeOrder();
+                order.Interprete(subContext);
+                subIngredients += subContext.ingredient.name + " ";
+            }
+
+            context.ingredient = new ComplexIngredient(this.operation.name + "(" + subIngredients + ")");
         }
 
-        public NaryOperationCookingOrder(NaryOperation[] operations)
+        public NaryOperationCookingOrder(Operation.Operation operation, List<CookingOrder> cookingOrders)
         {
-            this.operations = operations;
+            this.operation = operation;
+            this.cookingOrders = cookingOrders;
         }
     }
 }
