@@ -25,7 +25,7 @@ namespace CookingParser.Parser
 
         public bool HasNext()
         {
-            return this.next == null;
+            return this.next != null;
         }
 
         public abstract CookingOrder Handle(Recipe recipe);
