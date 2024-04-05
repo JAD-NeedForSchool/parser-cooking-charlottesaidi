@@ -18,7 +18,7 @@ namespace CookingParser.Parser
             this.operation = operation;
         }
 
-        public override CookingOrder Handle(Recipe recipe)
+        public override CookingOrder? Handle(Recipe recipe)
         {
             // todo
         }

@@ -28,6 +28,6 @@ namespace CookingParser.Parser
             return this.next != null;
         }
 
-        public abstract CookingOrder Handle(Recipe recipe);
+        public abstract CookingOrder? Handle(Recipe recipe);
     }
 }

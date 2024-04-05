@@ -8,5 +8,11 @@ namespace CookingParser.Parser
 {
     internal class Recipe
     {
+        public string token {  get; set; }
+
+        public Recipe(string token) 
+        {
+            this.token = token;
+        }
     }
 }

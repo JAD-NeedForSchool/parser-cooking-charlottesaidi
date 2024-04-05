@@ -8,14 +8,19 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Parser
 {
-    internal class NaryOperationCookingOrderHandler(string token, NaryOperation operation) : CookingRecipeTokenHandler
+    internal class NaryOperationCookingOrderHandler: CookingRecipeTokenHandler
     {
-        public string token { get; set; } = token;
-        public NaryOperation operation { get; set; } = operation;
+        public string token {  get; set; }
+        public NaryOperation operation { get; set; }
 
-        public override CookingOrder Handle(Recipe recipe)
+        public NaryOperationCookingOrderHandler(string token, NaryOperation operation): base(token)
         {
-            return new NaryOperationCookingOrder();
+            this.operation = operation;
+        }
+
+        public override CookingOrder? Handle(Recipe recipe)
+        {
+            // todo
         }
     }
 }
