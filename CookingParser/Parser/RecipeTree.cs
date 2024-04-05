@@ -14,10 +14,16 @@ namespace CookingParser.Parser
         public RecipeTree(string token) 
         {
             this.token = token;
+            this.subRecipeTrees = new List<RecipeTree>();
         }
 
         public void addSubRecipe(RecipeTree subRecipeTree)
         {
+            if (this.subRecipeTrees == null)
+            {
+                this.subRecipeTrees = new List<RecipeTree>();
+            }
+
             this.subRecipeTrees.Add(subRecipeTree);
         }
     }
