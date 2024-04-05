@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CookingParser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f70c9797b7eb5c00251f598cc16111f42e8980b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7ef3b5589c5ff24cc8e6340a931332317cf38f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CookingParser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CookingParser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
