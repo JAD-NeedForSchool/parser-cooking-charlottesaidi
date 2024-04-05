@@ -18,7 +18,7 @@ namespace CookingParser.Parser
             return CookingRecipeTokenChain.instance; 
         }
 
-        public override CookingOrder? Handle(Recipe recipe)
+        public override CookingOrder? Handle(RecipeTree recipe)
         {
             if (this.next != null)
             {

@@ -18,7 +18,7 @@ namespace CookingParser.Parser
             this.ingredient = ingredient;
         }
 
-        public override CookingOrder? Handle(Recipe recipe)
+        public override CookingOrder? Handle(RecipeTree recipe)
         {
             // todo
         }
