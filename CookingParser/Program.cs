@@ -2,6 +2,7 @@
 using CookingParser.Interpreter;
 using CookingParser.Operation.Complex;
 using CookingParser.Operation.Simple;
+using CookingParser.Parser;
 
 CookingOrder TakeYellowOrder = new SimpleOperationCookingOrder(new SimpleOperation("PrendreJaune"), new IngredientCookingOrder(new BasicIngredient("Oeuf")));
 CookingRecipeOrder context = new CookingRecipeOrder();
@@ -23,5 +24,9 @@ CookingOrder MayonnaiseRecipe = new SimpleOperationCookingOrder(new SimpleOperat
 CookingRecipeOrder MayonnaiseOrder = new CookingRecipeOrder();
 
 MayonnaiseRecipe.Interprete(MayonnaiseOrder);
+
+Console.WriteLine(MayonnaiseOrder.ingredient.name);
+
+RecipeTree recipeTree = CookingRecipeParser.TextToTree(MayonnaiseOrder.ingredient.name);
 
 Console.WriteLine(MayonnaiseOrder.ingredient.name);
