@@ -6,24 +6,13 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Parser
 {
-    internal class RecipeTree
+    internal class RecipeTree(string token)
     {
-        public string token {  get; set; }
-        public List<RecipeTree> subRecipeTrees { get; set; }
-
-        public RecipeTree(string token) 
-        {
-            this.token = token;
-            this.subRecipeTrees = new List<RecipeTree>();
-        }
+        public string token { get; set; } = token;
+        public List<RecipeTree> subRecipeTrees { get; set; } = [];
 
         public void addSubRecipe(RecipeTree subRecipeTree)
         {
-            if (this.subRecipeTrees == null)
-            {
-                this.subRecipeTrees = new List<RecipeTree>();
-            }
-
             this.subRecipeTrees.Add(subRecipeTree);
         }
     }

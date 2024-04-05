@@ -27,8 +27,6 @@ MayonnaiseRecipe.Interprete(MayonnaiseOrder);
 
 Console.WriteLine(MayonnaiseOrder.ingredient.name);
 
-string recipeText = "Touiller(Ajouter(Mélanger(PrendreJaune(Oeuf) Moutarde Vinaigre ) Huile ))";
-RecipeTree recipeTree = CookingRecipeParser.TextToTree(recipeText);
+RecipeTree recipeTree = CookingRecipeParser.TextToTree(MayonnaiseOrder.ingredient.name);
 
-Console.WriteLine("Recipe Tree:");
-CookingRecipeParser.PrintRecipeTree(recipeTree, 0);
+Console.WriteLine(MayonnaiseOrder.ingredient.name);
