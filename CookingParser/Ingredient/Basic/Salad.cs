@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Ingredient.Basic
 {
-    internal class Salad
+    internal class Salad: BasicIngredient
     {
+        public Salad() : base("Salad")
+        {
+
+        }
     }
 }

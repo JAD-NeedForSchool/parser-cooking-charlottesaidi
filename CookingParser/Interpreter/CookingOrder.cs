@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Interpreter
 {
-    internal class CookingOrder
+    interface CookingOrder
     {
+        void Interpret(CookingRecipeOrder context);
     }
 }

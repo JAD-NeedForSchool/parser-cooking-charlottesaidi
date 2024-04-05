@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Operation.Simple
 {
-    internal class Chop
+    class Chop: SimpleOperation
     {
+        public Chop() : base("Chop")
+        {
+        }
     }
 }

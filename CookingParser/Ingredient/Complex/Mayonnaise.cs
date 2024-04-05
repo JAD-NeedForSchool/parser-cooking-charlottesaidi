@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Ingredient.Complex
 {
-    internal class Mayonnaise
+    class Mayonnaise: ComplexIngredient
     {
+        public Mayonnaise() : base("Mayonnaise")
+        {
+
+        }
     }
 }

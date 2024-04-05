@@ -1,0 +1,15 @@
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\bin\Debug\net8.0\CookingParser.exe
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\bin\Debug\net8.0\CookingParser.deps.json
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\bin\Debug\net8.0\CookingParser.runtimeconfig.json
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\bin\Debug\net8.0\CookingParser.dll
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\bin\Debug\net8.0\CookingParser.pdb
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.AssemblyInfoInputs.cache
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.AssemblyInfo.cs
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.csproj.CoreCompileInputs.cache
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.sourcelink.json
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.dll
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\refint\CookingParser.dll
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.pdb
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\CookingParser.genruntimeconfig.cache
+C:\Users\Charlotte\source\repos\CookingParser\CookingParser\obj\Debug\net8.0\ref\CookingParser.dll

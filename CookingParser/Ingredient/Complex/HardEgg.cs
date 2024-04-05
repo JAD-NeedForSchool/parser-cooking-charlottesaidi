@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CookingParser.Ingredient.Complex
 {
-    internal class HardEgg
+    class HardEgg: ComplexIngredient
     {
+        public HardEgg() : base("HardEgg")
+        {
+
+        }
     }
 }
